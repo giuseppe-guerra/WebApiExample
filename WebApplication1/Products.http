@@ -1,0 +1,47 @@
+@WebApplication1_HostAddress = http://localhost:5226
+
+###
+GET {{WebApplication1_HostAddress}}/api/products
+
+###
+GET {{WebApplication1_HostAddress}}/api/products/1
+
+
+###
+POST {{WebApplication1_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+    "productName": "BigBubble",
+    "supplierId": 1,
+    "categoryId": 1,
+    "quantityPerUnit": "36 boxes",
+    "unitPrice": 1.0000,
+    "unitsInStock": 17,
+    "unitsOnOrder": 40,
+    "reorderLevel": 25,
+    "discontinued": false,
+    "category": null,
+    "supplier": null
+}
+
+###
+PUT {{WebApplication1_HostAddress}}/api/products/81
+Content-Type: application/json
+
+{
+    "productName": "Big Bubble",
+    "supplierId": 1,
+    "categoryId": 1,
+    "quantityPerUnit": "36 boxes",
+    "unitPrice": 1.5000,
+    "unitsInStock": 17,
+    "unitsOnOrder": 40,
+    "reorderLevel": 25,
+    "discontinued": false,
+    "category": null,
+    "supplier": null
+}
+
+###
+DELETE {{WebApplication1_HostAddress}}/api/products/82
